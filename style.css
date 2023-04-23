@@ -1,0 +1,25 @@
+.director {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.career {
+    color: beige;
+}
+
+#best {
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+
+.link {
+    color: rgb(169, 212, 26);
+}
+
+#topFilmsList {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
