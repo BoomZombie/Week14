@@ -49,27 +49,26 @@ const directors = [
     },
 ]; 
 
-directors.forEach((elem)  => {
-console.log(elem);
-const p = document.createElement('p');
-    p.textContent = elem.name;
-console.log(elem.name);
-    p.textContent = elem.career;
-console.log(elem.career);
-const a = document.createElement('a');
-    a.textContent = elem.films;
-console.log(elem.films);
-    p.textContent = elem.top_rated_film;
-console.log(elem.top_rated_film);
-//console.log(elem.name + elem.career + elem.films + elem.top_rated_film); 
-});
+let bro = document.querySelector('#directors-list');
 
 const div = document.createElement('div');
     div.className = 'alert';
     div.innerHTML = 'Добро пожаловать!';
-    document.body.append(div);
+    bro.append(div);
+
+directors.forEach((elem)  => {
+    const p = document.createElement('p');
+    p.innerHTML = `<div>
+        <div>${elem.name}</div>
+        <div>${elem.career}</div>
+        <a src = '${elem.films}'>Ссылка на фильм</a>
+        <div>${elem.top_rated_film}</div>
+    </div>`;
+    bro.append(p);
+});
 
 const topFilmsList = directors.map((elem) => {
+    console.log(elem);
     return elem.top_rated_film;
 });
 console.log(topFilmsList);
